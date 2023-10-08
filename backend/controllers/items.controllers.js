@@ -1,5 +1,5 @@
 import Items from '../models/Items.js'
-const getAllItems = async (req,res)=>{
+export const getAllItems = async (req,res)=>{
     try{
         const result = await Items.find()
         res.status(200).json(result)
@@ -9,6 +9,6 @@ const getAllItems = async (req,res)=>{
     }
 }
 
-export  {
+export default {
     getAllItems
 }

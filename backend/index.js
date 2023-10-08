@@ -20,7 +20,6 @@ const app = express();
 
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
-app.use('/api', router)
-
+app.use('/api/tft', router)
 app.listen(process.env.PORT)
-console.log(`Server running on http://localhost:${process.env.PORT}/api/tft `)
+console.log(`Server running on http://localhost:${process.env.PORT}/api/tft/champions  `)

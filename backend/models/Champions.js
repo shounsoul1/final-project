@@ -3,7 +3,8 @@ import mongoose from "mongoose";
 const champion = new mongoose.Schema({
     id:{
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     name: {
         type: String,
@@ -22,6 +23,6 @@ const champion = new mongoose.Schema({
         w: Number,
         h: Number
     }
-})
+},{minimize:false});
 
 export default mongoose.model('Champions', champion)
